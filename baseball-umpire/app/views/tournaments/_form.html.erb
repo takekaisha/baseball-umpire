@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-5">
+      <%= form_for @tournament, :html => { :class => 'form-horizontal' } do |f| %>
+        <div class="form-group">
+          <%= f.label :tournament_date, :class => 'control-label' %>
+          <%= f.date_field :tournament_date, :class => 'form-control' %>
+        </div>
+      
+        <div class="form-group">
+          <%= f.label :tournament_times, :class => 'control-label' %>
+          <%= f.number_field :tournament_times, :class => 'form-control' %>
+        </div>
+        
+        <div class="form-actions">
+          <%= f.submit nil, :class => 'btn btn-primary' %>
+          <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                      tournaments_path, :class => 'btn' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

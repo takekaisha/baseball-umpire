@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :tounament_names
+  resources :tournaments
   devise_for :users
   root to: 'home#top'
   get 'home/top'
